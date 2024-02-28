@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Cars</h1>
+<div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Color</th>
+                <th>HP</th>
+            </tr>
+            <tr th:each="car : ${carList}">
+                <td th:text="${car.getId()}">id</td>
+                <td th:text="${car.getColor()}">color</td>
+                <td th:text="${car.getHorsePowers()}">hp</td>
+            </tr>
+        </table>
+    </th:block>
+</div>
+</body>
+</html>
+
+<th:block th:each="car : ${carList}">
+    <!--        <h2 th:text="'This is '+ ${car.getColor()} + ' car, horse powers: '+${car.getHorsePowers()}"></h2>-->
